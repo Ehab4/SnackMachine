@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "priceValue": 5.6,
+    "amount": 5,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 2,
+    "priceValue": 7.5,
+    "amount": 3,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 3,
+    "priceValue": 0.7,
+    "amount": 7,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 4,
+    "priceValue": 34,
+    "amount": 6,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 5,
+    "priceValue": 17,
+    "amount": 0,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 6,
+    "priceValue": 12,
+    "amount": 5,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 7,
+    "priceValue": 70,
+    "amount": 9,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 8,
+    "priceValue": 6.5,
+    "amount": 2,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 9,
+    "priceValue": 27,
+    "amount": 8,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 10,
+    "priceValue": 44,
+    "amount": 6,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 11,
+    "priceValue": 57.5,
+    "amount": 1,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 12,
+    "priceValue": 23,
+    "amount": 4,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 13,
+    "priceValue": 42,
+    "amount": 8,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 14,
+    "priceValue": 0.5,
+    "amount": 3,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 15,
+    "priceValue": 0.8,
+    "amount": 7,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 16,
+    "priceValue": 33,
+    "amount": 5,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 17,
+    "priceValue": 37.5,
+    "amount": 0,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 18,
+    "priceValue": 52,
+    "amount": 4,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 19,
+    "priceValue": 33,
+    "amount": 9,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 20,
+    "priceValue": 6.5,
+    "amount": 2,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 21,
+    "priceValue": 21.5,
+    "amount": 7,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 22,
+    "priceValue": 25,
+    "amount": 4,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 23,
+    "priceValue": 57.5,
+    "amount": 2,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 24,
+    "priceValue": 23,
+    "amount": 4,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 25,
+    "priceValue": 15,
+    "amount": 4,
+    "moneyCurrency": "USD"
+  }
+]

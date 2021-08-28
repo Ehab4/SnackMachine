@@ -2,9 +2,9 @@ import java.util.List;
 
 public class Customer {
 
-    int productID;
-    List<Float> moneyInserted;
-    String moneyCurrency;
+    private int productID;
+    private List<Float> moneyInserted;
+    private String moneyCurrency;
 
     public int getProductID() {
         return productID;

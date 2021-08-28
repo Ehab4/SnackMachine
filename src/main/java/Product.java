@@ -1,8 +1,8 @@
 public class Product {
-    int id;
-    int priceValue;
-    int amount;
-    String moneyCurrency;
+    private int id;
+    private float priceValue;
+    private int amount;
+    private String moneyCurrency;
 
     public int getId() {
         return id;
@@ -12,11 +12,11 @@ public class Product {
         this.id = id;
     }
 
-    public int getPriceValue() {
+    public float getPriceValue() {
         return priceValue;
     }
 
-    public void setPriceValue(int priceValue) {
+    public void setPriceValue(float priceValue) {
         this.priceValue = priceValue;
     }
 

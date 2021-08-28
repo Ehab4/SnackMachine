@@ -8,15 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class SnacksMachine {
-    List<Product> productsList;
-    Customer customer;
-    HashMap<Float, Integer> returnedChange = new HashMap<Float, Integer>();
+    private List<Product> productsList;
+    private Customer customer;
+    private HashMap<Float, Integer> returnedChange = new HashMap<Float, Integer>();
+    private MachineMoneyState moneyState;
 
-    int[] moneyCounts = {10, 10, 10, 10, 10, 10};
-    float[] moneyValues = {50, 20, 1, 0.5f, 0.2f, 0.1f};
-
-    public SnacksMachine(String productListJSONPath) {
+    public SnacksMachine(String productListJSONPath, String moneyInMachineJSONPath) {
         this.initProductList(productListJSONPath);
+        this.initMachineMoneyState(moneyInMachineJSONPath);
 
     }
 
@@ -24,6 +23,15 @@ public class SnacksMachine {
         ObjectMapper mapper = new ObjectMapper();
         try {
             this.productsList = mapper.readValue(new File(productListJSONPath),  new TypeReference<List<Product>>(){});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void initMachineMoneyState(String moneyInMachineJSONPath){
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            this.moneyState = mapper.readValue(new File(moneyInMachineJSONPath),  MachineMoneyState.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,16 +67,16 @@ public class SnacksMachine {
 
     HashMap<Float, Integer> computeChange(float reminder) {
         float temp = reminder;
-        for (int i = 0; i < moneyCounts.length; i++) {
-            for (int j =0; j < moneyCounts[i]; j++) {
-                if (reminder >= moneyValues[i]) {
-                    if (returnedChange.get(moneyValues[i]) == null){
-                        returnedChange.put(moneyValues[i], 1);
+        for (int i = 0; i < moneyState.getMoneyCounts().size(); i++) {
+            for (int j =0; j < moneyState.getMoneyCounts().get(i); j++) {
+                if (reminder >= moneyState.getMoneyValues().get(i)) {
+                    if (returnedChange.get(moneyState.getMoneyValues().get(i)) == null){
+                        returnedChange.put(moneyState.getMoneyValues().get(i), 1);
                     } else {
-                        returnedChange.put(moneyValues[i], returnedChange.get(moneyValues[i]) + 1);
+                        returnedChange.put(moneyState.getMoneyValues().get(i), returnedChange.get(moneyState.getMoneyValues().get(i)) + 1);
                     }
 
-                    reminder = reminder*10 -moneyValues[i]*10;
+                    reminder = reminder*10 -moneyState.getMoneyValues().get(i)*10;
                     reminder /= 10.0f;
 
                     if (reminder == 0){
