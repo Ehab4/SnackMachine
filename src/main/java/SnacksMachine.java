@@ -16,7 +16,6 @@ public class SnacksMachine {
     public SnacksMachine(String productListJSONPath, String moneyInMachineJSONPath) {
         this.initProductList(productListJSONPath);
         this.initMachineMoneyState(moneyInMachineJSONPath);
-
     }
 
     void initProductList(String productListJSONPath){
@@ -48,6 +47,10 @@ public class SnacksMachine {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     Product findProduct(int productID) {

@@ -6,6 +6,12 @@ public class Customer {
     private List<Float> moneyInserted;
     private String moneyCurrency;
 
+    public Customer(int productID, List<Float> moneyInserted, String moneyCurrency) {
+        this.productID = productID;
+        this.moneyInserted = moneyInserted;
+        this.moneyCurrency = moneyCurrency;
+    }
+
     public int getProductID() {
         return productID;
     }
