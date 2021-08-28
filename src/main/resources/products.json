@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "priceValue": 12,
+    "amount": 5,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 2,
+    "priceValue": 8.5,
+    "amount": 3,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 3,
+    "priceValue": 0.7,
+    "amount": 7,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 4,
+    "priceValue": 34,
+    "amount": 6,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 5,
+    "priceValue": 17,
+    "amount": 0,
+    "moneyCurrency": "USD"
+  },
+  {
+    "id": 6,
+    "priceValue": 12,
+    "amount": 5,
+    "moneyCurrency": "USD"
+  }
+]
