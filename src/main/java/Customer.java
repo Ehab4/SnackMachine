@@ -11,6 +11,9 @@ public class Customer {
         this.moneyInserted = moneyInserted;
         this.moneyCurrency = moneyCurrency;
     }
+    public Customer() {
+
+    }
 
     public int getProductID() {
         return productID;

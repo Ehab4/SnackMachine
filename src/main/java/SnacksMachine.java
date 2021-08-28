@@ -71,27 +71,22 @@ public class SnacksMachine {
     HashMap<Float, Integer> computeChange(float reminder) {
         float temp = reminder;
         for (int i = 0; i < moneyState.getMoneyCounts().size(); i++) {
-            for (int j =0; j < moneyState.getMoneyCounts().get(i); j++) {
                 if (reminder >= moneyState.getMoneyValues().get(i)) {
-                    if (returnedChange.get(moneyState.getMoneyValues().get(i)) == null){
-                        returnedChange.put(moneyState.getMoneyValues().get(i), 1);
-                    } else {
-                        returnedChange.put(moneyState.getMoneyValues().get(i), returnedChange.get(moneyState.getMoneyValues().get(i)) + 1);
+                    int count = (int)(reminder / moneyState.getMoneyValues().get(i));
+                    if (moneyState.getMoneyCounts().get(i) >= count) {
+                        reminder = reminder - moneyState.getMoneyValues().get(i) * count;
+                    }else {
+                        reminder = reminder - moneyState.getMoneyValues().get(i) * moneyState.getMoneyCounts().get(i);
+                        count =  moneyState.getMoneyCounts().get(i);
                     }
 
-                    reminder = reminder*10 -moneyState.getMoneyValues().get(i)*10;
-                    reminder /= 10.0f;
 
+                    returnedChange.put(moneyState.getMoneyValues().get(i), count);
                     if (reminder == 0){
                         break;
                     }
-                } else {
-                    break;
                 }
-            }
-            if (reminder == 0){
-                break;
-            }
+
         }
 
         float totalChange = 0;
