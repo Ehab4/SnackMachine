@@ -74,6 +74,7 @@ public class TestSnackMachine {
         assert (res.equals("Money Back"));
 
         HashMap<Float, Integer> returnedChange = sm.getReturnedChange();
+        System.out.println(sm.getReturnedChange());
         for (Map.Entry<Float, Integer> entry : expectedChange.entrySet()) {
             assert (returnedChange.get(entry.getKey()) != null);
             assert (returnedChange.get(entry.getKey()).equals(entry.getValue()));

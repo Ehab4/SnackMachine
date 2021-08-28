@@ -68,6 +68,15 @@ public class SnacksMachine {
         return  res.getAmount();
     }
 
+    float getProductPrice(int productID) {
+        Product res = findProduct(productID);
+        if (res == null){
+            return 0;
+        }
+        return  res.getPriceValue();
+    }
+
+
     HashMap<Float, Integer> computeChange(float reminder) {
         float temp = reminder;
         for (int i = 0; i < moneyState.getMoneyCounts().size(); i++) {
